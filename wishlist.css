@@ -1,0 +1,163 @@
+/* CSS Variables */
+:root {
+    --primary-color: #5D4037;
+    --accent-color: #D4AF37;
+    --background-color: #FFFDF5;
+    --text-color: #333333;
+    --light-text: #666666;
+    --border-color: #E0E0E0;
+    --white: #FFFFFF;
+    --success: #2E7D32;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left-watermark {
+    position: fixed;
+    top: 50%;
+    right: 10px;  
+    transform: translateY(-50%);
+
+    width: 80px;   
+    opacity: 0.25;  
+    
+
+    z-index: 9999;
+    pointer-events: none;  
+}
+/* whatsapp icon */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+/* Wishlist Specific Styles */
+
+.wishlist-container {
+    padding: 40px 20px;
+    min-height: 60vh;
+}
+
+.wishlist-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.wishlist-header h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    justify-content: center;
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--light-bg);
+    border-radius: 12px;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+.btn-remove-wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #E53935;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.btn-remove-wishlist:hover {
+    transform: scale(1.1);
+    background: #fff;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Products | Atreyapuram Putharekulu (ATPU)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Boxicons for Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<!-- water mark -->
+    <img src="images/watermark.png" class="left-watermark">
+    <!-- whatsapp floating button -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+<body>
+
+    <!-- Navigation Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Title -->
+    <div class="page-header container">
+        <h1>All Products</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <i class='bx bx-chevron-right'></i> <span>Shop via Category</span>
+        </div>
+    </div>
+
+    <!-- Main Shop Layout -->
+    <main class="container shop-layout">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>Category</h3>
+                <ul class="category-filter-list">
+                    <li><input type="checkbox" id="cat-traditional" value="Traditional"> <label
+                            for="cat-traditional">Traditional</label></li>
+                    <li><input type="checkbox" id="cat-premium" value="Premium Delights"> <label
+                            for="cat-premium">Premium Delights</label></li>
+                    <li><input type="checkbox" id="cat-dryfruits" value="Dry Fruit Specials"> <label
+                            for="cat-dryfruits">Dry Fruit Specials</label></li>
+                    <!-- <li><input type="checkbox" id="cat-chocolate" value="Chocolate Fusion"> <label
+                            for="cat-chocolate">Chocolate Fusion</label></li> -->
+                    <li><input type="checkbox" id="cat-festive" value="Combo Packs"> <label for="cat-festive">Combo
+                            Packs</label></li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div class="price-slider custom-price-slider">
+                    <div class="price-output">
+                        Max Price: ₹<span id="price-value">5000</span>
+                    </div>
+                    <input type="range" min="100" max="5000" value="5000" class="slider" id="price-range">
+                    <div class="price-range-labels">
+                        <span>₹100</span>
+                        <span>₹5000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Sweetener</h3>
+                <ul>
+                    <li><input type="checkbox" id="sweetener-jaggery" value="Jaggery"> <label
+                            for="sweetener-jaggery">Bellam (Jaggery)</label></li>
+                    <li><input type="checkbox" id="sweetener-sugar" value="Sugar"> <label
+                            for="sweetener-sugar">Sugar</label></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="product-grid-container">
+            <div class="grid-header">
+                <span class="result-count">Showing all products</span>
+
+                <div class="view-switcher">
+                    <span>View:</span>
+                    <button class="btn-view" id="grid-2" title="2 Columns">2</button>
+                    <button class="btn-view active" id="grid-3" title="3 Columns">3</button>
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be injected via JS -->
+                <div class="loading-spinner">Loading products...</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+<script src="footer.js"></script>
+<script src="data.js"></script>
+<script src="shop.js"></script>
+</body>
+
+</html>

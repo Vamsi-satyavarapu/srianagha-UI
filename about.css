@@ -1,0 +1,237 @@
+/* CSS Variables */
+:root {
+    --primary-color: #f84d19;
+    --accent-color: #f05c0c;
+    --background-color: #FFFDF5;
+    --text-color: #333333;
+    --light-text: #666666;
+    --border-color: #E0E0E0;
+    --white: #FFFFFF;
+    --success: #2E7D32;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.left-watermark {
+    position: fixed;
+    top: 50%;
+    right: 10px;  
+    transform: translateY(-50%);
+
+    width: 80px;   
+    opacity: 0.4;  
+
+    z-index: 9999;
+    pointer-events: none;  
+}
+/* whatsapp icon */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.about-hero {
+    height: 60vh;
+    min-height: 400px;
+    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), #3E2723);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.about-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-section {
+    padding: 4rem 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+.about-section.reverse .about-grid {
+    direction: rtl;
+}
+
+.about-section.reverse .about-text {
+    direction: ltr;
+}
+
+.about-section.reverse .about-image {
+    order: 2;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.values-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.values-list i {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.stats-section {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem 0;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.stat-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #666;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-section.reverse .about-grid {
+        direction: ltr;
+    }
+
+    .about-section {
+        padding: 2rem 0;
+    }
+}

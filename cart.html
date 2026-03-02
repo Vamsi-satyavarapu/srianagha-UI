@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | Atreyapuram Putharekulu (ATPU)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<!-- water mark -->
+    <img src="images/watermark.png" class="left-watermark">
+    <!-- whatsapp floating button -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+<body>
+    <div id="navbar-placeholder"></div>
+    <main class="container cart-page-container">
+        <h1 class="page-title">Shopping Cart</h1>
+
+        <div class="cart-content-wrapper">
+            <div class="cart-items-section">
+                <div class="cart-header-row">
+                    <div class="col-product">Product</div>
+                    <div class="col-price">Price</div>
+                    <div class="col-quantity">Quantity</div>
+                    <div class="col-total">Total</div>
+                </div>
+
+                <div id="cart-items-list">
+                    <div class="empty-cart-message">
+                        <p>Your cart is currently empty.</p>
+                        <a href="index.html" class="btn-secondary">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary-section">
+                <div class="summary-card">
+                    <h2>Order Summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">Rs. 0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="free-shipping">FREE</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="summary-total">Rs. 0.00</span>
+                    </div>
+                    <p class="tax-note">Tax included and shipping calculated at checkout</p>
+                    <button class="checkout-btn" onclick="window.location.href='payment.html'">Proceed to
+                        Checkout</button>
+                    <a href="index.html" class="continue-shopping">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
